@@ -1,2 +1,2 @@
-import { frontMatter } from './foo.mdx'
-console.log(frontMatter)
+import content from './foo.mdx'
+console.log(content)
