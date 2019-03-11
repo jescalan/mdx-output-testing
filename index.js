@@ -3,8 +3,17 @@ const path = require('path')
 
 webpack(
   {
-    mode: 'development',
-    entry: './src/entry',
+    mode: 'production',
+    entry: {
+      index: './src/entry',
+      other: './src/entry-2'
+    },
+    optimization: {
+      usedExports: true,
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     module: {
       rules: [
         {
@@ -28,6 +37,6 @@ webpack(
   },
   (err, stats) => {
     if (err) console.log(err)
-    console.log(stats)
+    //console.log(stats)
   }
 )
