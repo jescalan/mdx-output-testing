@@ -3,7 +3,7 @@ const path = require('path')
 
 webpack(
   {
-    mode: 'development',
+    mode: 'production',
     entry: './src/entry',
     module: {
       rules: [
@@ -24,6 +24,13 @@ webpack(
           ]
         }
       ]
+    },
+    optimization: {
+      minimize: false,
+      usedExports: true,
+      splitChunks: {
+        chunks: 'all'
+      }
     }
   },
   (err, stats) => {
