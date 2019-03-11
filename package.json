@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.3.4",
-    "@mdx-js/loader": "^0.20.3",
+    "@mdx-js/loader": "^1.0.0-alpha.6",
     "babel-loader": "^8.0.5",
     "gray-matter": "^4.0.2",
     "loader-utils": "^1.2.3",
